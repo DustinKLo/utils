@@ -1,0 +1,19 @@
+service: braze-avro-converter
+
+provider:
+  name: aws
+  runtime: python2.7
+  profile: pray
+  region: us-east-1
+  deploymentBucket: pray-serverless
+
+functions:
+  convert_avro:
+    handler: convert_avro.main
+    events:
+      - s3:
+        bucket: pray-appboy
+        event: s3:ObjectCreated:*
+        rules:
+          - prefix: currents/
+          - suffix: .avro

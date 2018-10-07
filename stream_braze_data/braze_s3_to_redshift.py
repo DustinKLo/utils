@@ -14,8 +14,7 @@ from avro.io import DatumReader, DatumWriter
 
 from pprint import pprint
 
-# AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
-# AWS_SECRET_KEY = os.environ['AWS_SECRET_KEY']
+
 ACCESS_KEY = os.environ['ACCESS_KEY']
 SECRET_KEY = os.environ['SECRET_KEY']
 BUCKET_NAME = os.environ['BUCKET_NAME']
