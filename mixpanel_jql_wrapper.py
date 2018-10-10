@@ -1,3 +1,4 @@
+import requests
 
 def pull_jql_data(jql_string, token):
     url = 'https://mixpanel.com/api/2.0/jql'
